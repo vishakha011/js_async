@@ -10,7 +10,9 @@ setTimeout(sayHello, 1000);
 console.log("Hey You!");
 ```
 
- output
+ output:
+ "Hey You!"
+ "Hey You Called Me"
 
 2.
 ```js
@@ -22,7 +24,9 @@ setTimeout(sayHello, 0);
 
 console.log("Hey You!");
 ```
- output
+ output:
+ "Hey You!"
+ "Hey You Called Me"
 
 3.
 ```js
@@ -35,7 +39,10 @@ function main() {
 }
 main();
 ```
- output
+ output:
+ A
+ C
+ B
 
 4.
 ```js
@@ -54,8 +61,14 @@ function main() {
   runWhileLoopForNSeconds(3);
   console.log("C");
 }
+main();
 
- output
+ output:
+ A
+ C
+ B
+
+
 
 5. Look at the output of the code below to understand hwo things are happening.
 
@@ -80,3 +93,14 @@ function main() {
 main();
 
 ```
+- Creation of GEC and call stack
+- line 21: creation of FEC for console.log
+    - logs A with the execution time// output: A  0
+- line 86: goes to web browser API
+    - after 1000ms, callback function goes to callback queue
+    - Event loop looks into the call stack and determine if the call stack is empty or not. If it is empty,Event loop pushes the callback to the top of the stack.
+    (Right now, its not empty!)
+- line89: runs runWhileLoopForNSeconds for 3 msec
+    - logs C with the execution time// output: C  3000
+- Call Stack is empty, callback function will be pushed to call stack
+    - logs B with the execution time// output: B  3008

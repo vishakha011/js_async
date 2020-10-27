@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: #45aaf2;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 660px;
+    min-width: 600px;
+    margin-top: 8rem;
+}
+
+.heading {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.search {
+    box-shadow: 1px 1px 5px #333;
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.search > input {
+    background-color: #4b7bec;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 1rem;
+    width: 80%;
+    outline: none;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+.search > button {
+    background-color: #fff;
+    border: none;
+    color: #45aaf2;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 20%;
+    outline-color: #45aaf2;
+}
+
+.card-wrapper {
+    border: 1px solid #ddd;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4191ca;;
+    color: #fff;
+    padding: 1rem;
+}
+
+
+.user-avatar {
+    width: 30%;
+}
+
+.user-avatar > img {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.user-info {
+    width: 68%;
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.user-info p {
+    margin: 1rem 0;
+}

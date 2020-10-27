@@ -4,6 +4,13 @@
 // 3. Resolve the promise when data is fetched (onload)
 // 4. Reject the promise when error occured (onerror)
 
-function fetchData() {
-  // your code goes here
-}
+fetch(`https://api.github.com/user/getify`).then(
+  // on Fulfilled
+  response => {
+    console.log(response);
+  },
+  // on Rejected
+  error => {
+    console.error(error);
+  }
+);
